@@ -1,0 +1,16 @@
+#Getting bill details from user
+
+bill = input("What is the bill total? ")
+tip = input("What precent do you want to tip? ")
+split = input("How many people are splitting the bill? ")
+
+#Preform tip calculations
+paymentDiv = (float(bill) / float(split))
+tipDiv = (1.0 + (float(tip) * .01))
+payment = paymentDiv * tipDiv
+
+#Rounding the result to two decimal places
+paymentResult = round(payment, 2)
+
+#Printing result
+print("Each person should pay: " + str(paymentResult))
